@@ -6,6 +6,7 @@ pipeline {
              sh "sudo update -y"
               sh "sudo apt install maven -y"
             }
+        }
         stage('Checkout') {
             steps {
               sh "rm -rf hello-world-war"
