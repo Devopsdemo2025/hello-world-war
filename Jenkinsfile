@@ -10,9 +10,12 @@ pipeline {
         stage('Build') {
             steps {
               sh "mvn clean package"
-            }
-        
-            
+            }      
+        }
+        stage('Deploy') {
+            steps {
+              sh "cp /var/lib/jenkins/workspace/HelloWorld_Pipeline/target/hello-world-war-1.0.0.war /opt/apache-tomcat-11.0.14/webapps/"
+            }      
         }
     }
 }
