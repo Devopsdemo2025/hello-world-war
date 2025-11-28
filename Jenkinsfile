@@ -28,7 +28,7 @@ pipeline {
    stage('Deploy') {
  //   agent { label 'java' }
     steps {
-        sh "sudo cp /home/slave2/workspace/HelloWorld_Pipeline/target/hello-world-war-1.0.0.war home/apache-tomcat-11.0.14/webapps"
+        sh "sudo cp /home/slave2/workspace/HelloWorld_Pipeline/target/hello-world-war-1.0.0.war /home/slave2/apache-tomcat-11.0.14/webapps"
     }
 }
     }
