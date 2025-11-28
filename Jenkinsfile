@@ -17,6 +17,13 @@ pipeline {
             }
         }
 
+        stage('Whoami') {
+    agent { label 'java' }
+    steps {
+        sh 'whoami'
+    }
+}
+        
    stage('Deploy') {
     agent { label 'java' }
     steps {
