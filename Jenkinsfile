@@ -4,6 +4,7 @@ pipeline {
 
     stages {
         stage('Checkout') {
+          parallel {
            agent { label 'java' }
             steps {
                 sh 'rm -rf hello-world-war'
@@ -25,5 +26,6 @@ pipeline {
        echo "deployed"
     }
 }
+        }
     }
 }
