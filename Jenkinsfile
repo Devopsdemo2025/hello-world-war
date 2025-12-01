@@ -11,7 +11,7 @@ pipeline {
         stage('Hello-world') {
           parallel {
             stage('Checkout') {
-        //   agent { label 'java' }
+           agent { label 'java' }
             steps {
                 sh 'rm -rf hello-world-war'
                 sh 'git clone https://github.com/Devopsdemo2025/hello-world-war'
@@ -19,7 +19,7 @@ pipeline {
         }
 
         stage('Build') {
-       //     agent { label 'java' }
+            agent { label 'java' }
             steps {
                 sh 'mvn clean package'
             }
@@ -32,7 +32,7 @@ pipeline {
 
         
    stage('Deploy') {
-//    agent { label 'java' }
+    agent { label 'java' }
     steps {
       sh "sudo cp /home/slave1/workspace/HelloWorld_Pipeline/target/hello-world-war-1.0.0.war  /opt/apache-tomcat-11.0.14/webapps" 
    //   sh "sudo scp /home/slave1/workspace/HelloWorld_Pipeline/target/hello-world-war-1.0.0.war  jenkins@13.204.75.35:/opt/apache-tomcat-11.0.14/webapps/" 
