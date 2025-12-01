@@ -7,9 +7,9 @@ pipeline {
        // booleanParam(name: 'DEBUG', defaultValue: false, description: 'Enable debug mode')
         choice(name: 'maven build', choices: ['package', 'compile', 'install'], description: 'build project')
     }
-   withCredentials([usernamePassword(credentialsId: 'a67f270b-a726-4fe8-9911-35ca43fdee7d', 
-                                                 usernameVariable: 'USER', 
-                                                 passwordVariable: 'PASS')])
+   withCredentials([usernameColonPassword(credentialsId: 'f6915832-0fba-4dd5-86a9-edb503cb7651', variable: 'userandpass')]) {
+    // some block
+}
 
     stages {
         stage('Hello-world') {
