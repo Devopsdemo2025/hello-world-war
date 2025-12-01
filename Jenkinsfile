@@ -1,3 +1,4 @@
+
 pipeline {
    agent none
   //agent { label 'java' }
@@ -6,6 +7,9 @@ pipeline {
        // booleanParam(name: 'DEBUG', defaultValue: false, description: 'Enable debug mode')
         choice(name: 'maven build', choices: ['package', 'compile', 'install'], description: 'build project')
     }
+   withCredentials([usernamePassword(credentialsId: 'a67f270b-a726-4fe8-9911-35ca43fdee7d', 
+                                                 usernameVariable: 'USER', 
+                                                 passwordVariable: 'PASS')])
 
     stages {
         stage('Hello-world') {
