@@ -32,13 +32,11 @@ pipeline {
         withCredentials([usernameColonPassword(credentialsId: 'f6915832-0fba-4dd5-86a9-edb503cb7651', variable: 'userandpass')]) {
     // some block
 }
-
+                    }
                             sh """
                                 sudo cp /home/slave1/workspace/HelloWorld_Pipeline/target/hello-world-war-1.0.0.war \
                                 /opt/apache-tomcat-11.0.14/webapps
                             """
-
-                            // Example if you want SCP using credentials:
                             // sh "scp /path/to/war jenkins:${userandpass}@13.204.75.35:/opt/apache-tomcat-11.0.14/webapps/"
                         }
                     }
