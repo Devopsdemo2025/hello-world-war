@@ -2,7 +2,7 @@ pipeline {
     agent none
 //agent { label 'java' }
     parameters {
-        string(name: 'MAVEN_CLEAN', defaultValue: 'clean', description: 'Enter clean command')
+        string(name: 'MAVEN_CLEAN', defaultValue: '', description: 'Enter clean command')
         choice(name: 'MAVEN_BUILD', choices: ['package', 'compile', 'install'], description: 'Build project')
     }
 
