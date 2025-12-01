@@ -2,7 +2,7 @@ pipeline {
    agent none
   //agent { label 'java' }
   parameters {
-        string(name: 'USERNAME', defaultValue: '', description: 'Enter username')
+        string(name: 'maven clean', defaultValue: '', description: 'Enter clean here')
        // booleanParam(name: 'DEBUG', defaultValue: false, description: 'Enable debug mode')
         choice(name: 'maven build', choices: ['package', 'compile', 'install'], description: 'build project')
     }
