@@ -10,7 +10,6 @@ pipeline {
 
         stage('Hello-world') {
             parallel {
-
                 stage('Checkout') {
                     agent { label 'java' }
                     steps {
@@ -28,7 +27,7 @@ pipeline {
 
                 stage('Deploy') {
                     agent { label 'java' }
-                  //  steps {
+                    steps {
                     /*    withCredentials([
                             usernameColonPassword(
                                 credentialsId: 'f6915832-0fba-4dd5-86a9-edb503cb7651',
