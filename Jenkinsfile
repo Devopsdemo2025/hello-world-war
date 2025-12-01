@@ -24,11 +24,7 @@ pipeline {
                 sh 'mvn clean package'
             }
         }
-            stage('Who am I') {
-  steps {
-    sh 'whoami'
-  }
-}
+           
 
         
    stage('Deploy') {
