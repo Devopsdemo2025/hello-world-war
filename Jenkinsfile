@@ -30,7 +30,7 @@ pipeline {
 //    agent { label 'java' }
     steps {
       sh """
-sudo /bin/cp /home/slave3/workspace/HelloWorld_Pipeline/target/hello-world-war-1.0.0.war \
+sudo /bin/cp /home/slave1/workspace/HelloWorld_Pipeline/target/hello-world-war-1.0.0.war 
 /home/apache-tomcat-11.0.14/webapps/
 """ 
    //   echo "build deployed"
