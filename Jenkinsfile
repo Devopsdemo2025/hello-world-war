@@ -1,6 +1,6 @@
 pipeline {
   // agent none
-     agent { label 'java2' }
+     agent { label 'java' }
 
     stages {
         stage('Hello-world') {
